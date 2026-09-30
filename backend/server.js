@@ -1,6 +1,9 @@
 const express = require("express");
+const connectDB = require("./config/db");
 const productRoutes = require("./routes/productRoutes");
 const app = express();
+// Connect MongoDB
+connectDB();
 // Middleware 1: JSON Parser
 app.use(express.json());
 // Logger middleware

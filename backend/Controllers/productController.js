@@ -18,7 +18,7 @@ const getProducts = (req,res) => {
 const getProductById = (req,res) => {
     const productId = Number(req.params.id);
     const product = products.find(
-        product == product.id == productId
+        product => product.id === productId
     );
     if(!product){
         return res.status(404).json({
